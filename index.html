@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jofre Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="stylesCSS\general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @media only screen and (max-width: 600px) {
+            *{
+                background-color: rgb(34, 34, 34);
+            }    
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<!--Barra de navegación-->
+    <div class="nav">
+        <header>
+            <div class="top-header">
+                <img src="imagenes_doc\Logo.png" alt="Media no se encuentra disponible" height="175" width="175"/>
+            </div>
+        </header>
+            <nav>
+                <section>
+                    <div>
+                        <div class="link-nav-header">
+                            <a href="#CONTACTO"><h3>Contacto</h3></a>
+                        </div>
+                        <div class="link-nav-header">
+                            <a href="#CARRERA"><h3>Carrera</h3></a>
+                        </div>
+                        <div class="link-nav-header">
+                            <a href="#FORMACION"><h3>Formación</h3></a>
+                        </div>
+                        <div class="link-nav-header">
+                            <a href=""><h3>Inicio</h3></a>
+                        </div>
+                    </div>
+                </section>
+            </nav>
+    </div>
+<!--Pantalla inicial-->
+    <div class="main-screen">
+        <div class="main-screen-conteiner">
+            <div class="main-screen-conteiner-a">
+                <div class="name-main-1">
+                    Bienvenido, mi nombre es
+                </div>
+                <div class="name-main">
+                    <h1>Nahuel Jofré</h1>
+                </div>
+                <div class="p-main">
+                    <p>Completar con una descripcion mas adecuada.</p>
+                </div>
+                <div class="end-p-main">
+                    <a href="#FORMACION" style="transition: width 2s; transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);">Desliza para más...</a>
+                </div>
+            </div>
+            <div class="main-screen-conteiner-b">
+                <img src="imagenes_doc\nau1.jpg" alt="Media no se encuentra disponible" height="350" width="350"/>
+            </div>
+        </div>
+    </div>
+<!--Información de CV-->
+    <div class="formacion-personal">
+        <div class="titulo-cv" id="FORMACION">
+            <div>
+                <h1>Formación <span class="emoji-titulo-cv">+</span></h1>
+            </div>
+        </div>
+        <div class="categorias-cv">
+            <div class="categorias-cv-a">
+                <h2>Titulo secundario:</h2>
+                <p><span class="emoji-p-cv">+</span>Bachiller en Ciencias Sociales</p>
+            </div>
+            <div class="categorias-cv-a-1">
+                <h2>Cursos:</h2>
+                <p><span class="emoji-p-cv">+</span>Marketing digital</p>
+                <p><span class="emoji-p-cv">+</span>Fotografía profesional</p>
+            </div>
+            <div class="categorias-cv-a">
+                <h2>Estudios universitarios:</h2>
+                <p><span class="emoji-p-cv">+</span>Ingeniería electrónica (UNLP). Cursando 4to año</p>
+            </div>
+            <div class="categorias-cv-a">
+                <h2>Ingles:</h2>
+                <p><span class="emoji-p-cv">+</span>B2-High Intermediate. Test Versant de Pearson</p>    
+            </div>
+        </div>
+    </div>
+    <div class="formacion-personal">
+        <div class="titulo-cv" id="CARRERA">
+            <div>
+                <h1>Carrera <span class="emoji-titulo-cv">+</span></h1>
+            </div>
+        </div>
+        <div class="categorias-cv">
+            <div class="categorias-cv-a">
+                <h2>Inclusion Cloud <span class="tiempo-empleo"> Septiembre 2022 - Actualidad</span></h2>
+                <p><span class="emoji-p-cv">+</span>Desarrollador.</p>
+            </div>
+            <div class="categorias-cv-a-2">
+                <h2>Tenaris <span class="tiempo-empleo"> Febrero 2021 - Agosto 2022</span></h2>
+                <p><span class="emoji-p-cv">+</span>Desarrollador en herramientas como Nifi, Grafana y bases de datos como postgreSQL y Elasticsearch.</p>
+            </div>
+            <div class="categorias-cv-a">
+                <h2>Emprendimientos personales</h2>
+                <p><span class="emoji-p-cv">+</span>Reparacion de computadoras y celulares.</p>
+            </div>
+            <div class="categorias-cv-a">
+                <h2>Dietetica</h2>
+                <p><span class="emoji-p-cv">+</span>Encargado.</p>    
+            </div>
+        </div>
+    </div>
+<!--Generación de mail de contacto-->
+    <div class="formulario-contacto">
+            <div class="titulo-cv" id="CONTACTO">
+                <h1>Pongámonos en contacto! <span class="emoji-titulo-cv">+</span></h1>
+            </div>
+            <div class="descripcion-formulario">Completar con una descripcion mas adecuada.</div>
+            <div class="formulario-datos">
+                <form id="form-email" method="get" class="form">
+                    <div class="campos-formulario">
+                        <input type="text" class="campo-form-a" name="nombre" data-name="Nombre" placeholder="Nombre" id="Nombre-1" required>
+                        <input type="email" class="campo-form-a" name="email-1" data-name="Email" placeholder="Email" id="Email-1" required>
+                        <textarea name="text-1" class="campo-form-b" data-name="Nombre" placeholder="Como puedo ayudarte?"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" text-align="center" data-wait="Por favor espere..." class="campo-form-c">
+                </form>
+            </div>
+        </div>
+    </div>
+<!--Pie de pagina-->
+    <div class="footer">
+        <div class="footer">
+            <section>
+                <div id="footer-b">
+                    <a href="mailto:naujofre@hotmail.com">Contáctame!</a>
+                </div>
+            </section>
+            <section id="footer-a">
+                <div id="footer-a-1">Hecho desde cero por mi :)</div>
+                <div id="footer-a-2">© 2023 Nahuel Jofré</div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
