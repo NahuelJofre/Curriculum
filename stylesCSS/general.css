@@ -1,44 +1,85 @@
 /*Configuración del macro*/
+/*color: rgb(190, 95, 190);*/
 
-*{
-    background-color: rgb(0, 0, 0);
+:root {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    background-color: black;
     color: white;
+}
+html {
+    scroll-behavior: smooth;
 }
 p{
     font-size: 18px;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+/*Cambio de tema*/
+/*
+body.dark-theme{
+    --text-color: rgb(225, 0, 210);
+}
 
+.change-theme{
+    position: absolute;
+    right: 40%;
+    top: 2.2rem;
+    display: flex;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.change-theme:hover{
+    color: var(--text-color);
+}
+
+#theme-button{
+    font-size: 27px;
+}
+*/
 /*Barra de navegación y logotipo principal*/
-
+a:-webkit-any-link{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 .nav{
     width: 100%;
     height: 100px;
+    color: white;
 }
 .link-nav-header{
-    color: white;
-    width: 6%;
-    float: right;
-    height: 65px;
-    font-size: 17px;
+    width: 100%;
+    float: left;
+    height: auto;
     text-align: center;
-    text-decoration: dotted;
+}
+.link-nav-item{
+    width: 100%;
+    display: inline;
+    margin: 4px;
+    font-size: 30px;
+    color: white;
 }
 .top-header{
-    border: 1px solid black;
-    color: rgb(190, 95, 190);
     width: 20%;
     float: left;
     font-size: 20px;
     height: 65px;
     text-align: center;
 }
+.nav_menu{
+    width: 40%;
+    float: right;
+    color: white;
+}
 
 /*Pantalla de inicio, primera vista*/
 
 .main-screen{
-    border: 1px solid black;
     margin-top: 50px;
     width: 100%;
     height: 450px;
@@ -47,26 +88,27 @@ p{
 
 }
 .main-screen-conteiner{
-    border: 1px solid black;
     width: 100%;
     height: 100%;
     display: flex;
 }
 .main-screen-conteiner-a{
-    border: 1px solid black;
     width: 30%;
     height: 100%;
     margin-left: 20%;
 }
 .main-screen-conteiner-b{
-    border: 1px solid black;
     width: 30%;
     height: 100%;
     text-align: center;
 }
+.main-screen-conteiner-image{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
 
 .name-main{
-    border: 1px solid black;
     width: 50%;
     float: left;
     font-size: 15px;
@@ -88,6 +130,7 @@ p{
 }
 .end-p-main{
     width: 100%;
+    color: aqua;
     float: right;
     font-size: 15px;
     text-align: center;
@@ -96,13 +139,11 @@ p{
 /*Formación personal*/
 
 .formacion-personal{
-    border: 1px solid black;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 .titulo-cv{
-    border: 1px solid black;
     width: 80%;
     height: 100px;
     margin-left: 20%;
@@ -116,7 +157,6 @@ p{
     font-size: 27px;
 }
 .categorias-cv{
-    border: 1px solid black;
     width: 60%;
     margin-left: 15%;
     margin-right: 15%;
@@ -125,7 +165,6 @@ p{
     display: table;
 }
 .categorias-cv-a{
-    border: 1px solid black;
     width: 60%;
     height: 100px;
     margin-left: auto;
@@ -133,7 +172,6 @@ p{
     position: relative;
 }
 .categorias-cv-a-1{
-    border: 1px solid black;
     width: 60%;
     height: 150px;
     margin-left: auto;
@@ -141,7 +179,6 @@ p{
     position: relative;
 }
 .categorias-cv-a-2{
-    border: 1px solid black;
     width: 80%;
     height: 100px;
     margin-left: auto;
@@ -149,24 +186,21 @@ p{
     position: relative;
 }
 .tiempo-empleo{
-    border: 1px solid black;
     font-size: 15px;
 }
 
 /*Formulario de contacto*/
 
 .formulario-contacto{
-    border: 1px solid black;
     width: 100%;
     height: 500px;
 }
 .formulario-datos{
-    border: 1px solid black;
     width: 50%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
-    float: right;
+    float: left;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -213,7 +247,6 @@ p{
 
 }
 #form-email{
-    border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
     display: table;
@@ -224,8 +257,7 @@ p{
     width: 70%;
 }
 .descripcion-formulario{
-    border: 1px solid black;
-    width: 50%;
+    width: 40%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -239,12 +271,10 @@ p{
 /*Pie de pagina*/
 
 .footer{
-    border: 1px solid black;
     width: 100%;
     height: 80px;
 }
 #footer-a{
-    border: 1px solid black;
     color: whitesmoke;
     width: 100%;
     float: left;
@@ -252,26 +282,47 @@ p{
     text-align: left;
 }
 #footer-a-1{
-    border: 1px solid black;
     color: whitesmoke;
     width: 45%;
     float: left;
+    margin-left: 50px;
     font-size: 20px;
     text-align: left;
 }
 #footer-b{
-    border: 1px solid black;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     width: 100%;
     float: right;
     text-align: center;
     font-size: 25px;
 }
 #footer-a-2{
-    border: 1px solid black;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     width: 45%;
     float: right;
-    font-size: 15px;
+    margin-right: 50px;
+    font-size: 17px;
     text-align: right;
+}
+
+.scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    border-radius: .4rem;
+    transition: .4s;
+    visibility: hidden;
+}
+.scrolltop_icon{
+    font-size: 5rem;
+    color:  rgb(190, 95, 190);
+}
+
+.show-scroll{
+    visibility: visible;
+    bottom: 5rem;
 }

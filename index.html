@@ -9,22 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <style>
-        @media only screen and (max-width: 600px) {
-            *{
-                background-color: rgb(34, 34, 34);
-            }    
-        }
-    </style>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 <!--Barra de navegación-->
-    <div class="nav">
+    <div class="nav" id="inicio">
         <header>
             <div class="top-header">
                 <img src="imagenes_doc\Logo.png" alt="Media no se encuentra disponible" height="175" width="175"/>
@@ -32,19 +21,34 @@
         </header>
             <nav>
                 <section>
-                    <div>
-                        <div class="link-nav-header">
-                            <a href="#CONTACTO"><h3>Contacto</h3></a>
-                        </div>
-                        <div class="link-nav-header">
-                            <a href="#CARRERA"><h3>Carrera</h3></a>
-                        </div>
-                        <div class="link-nav-header">
-                            <a href="#FORMACION"><h3>Formación</h3></a>
-                        </div>
-                        <div class="link-nav-header">
-                            <a href=""><h3>Inicio</h3></a>
-                        </div>
+                    <div class="nav_menu">
+                        <ul class="link-nav-header">
+                            <!--<li class="link-nav-item">
+                                <a>
+                                    <i class='bx bx-moon change-theme' title="Theme" id="theme-button"></i>
+                                </a>
+                            </li>-->
+                            <li class="link-nav-item">
+                                <a href="#inicio">
+                                    <i class='bx bxs-home' ></i>Inicio
+                                </a>
+                            </li>
+                            <li class="link-nav-item">
+                                <a href="#formacion">
+                                    <i class='bx bx-book' ></i>Formación
+                                </a>
+                            </li>
+                            <li class="link-nav-item">
+                                <a href="#carrera">
+                                    <i class='bx bx-briefcase-alt' ></i>Carrera
+                                </a>
+                            </li>
+                            <li class="link-nav-item">
+                                <a href="#contacto">
+                                    <i class='bx bx-user-pin' ></i>Contacto
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </nav>
@@ -63,17 +67,19 @@
                     <p>Completar con una descripcion mas adecuada.</p>
                 </div>
                 <div class="end-p-main">
-                    <a href="#FORMACION" style="transition: width 2s; transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);">Desliza para más...</a>
+                    <a href="#formacion" style="transition: width 2s; transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);">Desliza para más...</a>
                 </div>
             </div>
             <div class="main-screen-conteiner-b">
-                <img src="imagenes_doc\nau1.jpg" alt="Media no se encuentra disponible" height="350" width="350"/>
+                <div class="main-screen-conteiner-image">
+                    <img src="imagenes_doc\nau1.jpg" alt="Media no se encuentra disponible" height="350" width="350"/>
+                </div>
             </div>
         </div>
     </div>
 <!--Información de CV-->
     <div class="formacion-personal">
-        <div class="titulo-cv" id="FORMACION">
+        <div class="titulo-cv" id="formacion">
             <div>
                 <h1>Formación <span class="emoji-titulo-cv">+</span></h1>
             </div>
@@ -99,7 +105,7 @@
         </div>
     </div>
     <div class="formacion-personal">
-        <div class="titulo-cv" id="CARRERA">
+        <div class="titulo-cv" id="carrera">
             <div>
                 <h1>Carrera <span class="emoji-titulo-cv">+</span></h1>
             </div>
@@ -125,10 +131,10 @@
     </div>
 <!--Generación de mail de contacto-->
     <div class="formulario-contacto">
-            <div class="titulo-cv" id="CONTACTO">
+            <div class="titulo-cv" id="contacto">
                 <h1>Pongámonos en contacto! <span class="emoji-titulo-cv">+</span></h1>
             </div>
-            <div class="descripcion-formulario">Completar con una descripcion mas adecuada.</div>
+            <div class="descripcion-formulario"></div>
             <div class="formulario-datos">
                 <form id="form-email" method="get" class="form">
                     <div class="campos-formulario">
@@ -146,7 +152,7 @@
         <div class="footer">
             <section>
                 <div id="footer-b">
-                    <a href="mailto:naujofre@hotmail.com">Contáctame!</a>
+                    <!--<a href="mailto:naujofre@hotmail.com">Contáctame!</a>-->
                 </div>
             </section>
             <section id="footer-a">
@@ -155,5 +161,9 @@
             </section>
         </div>
     </div>
+    <a href="#inicio" class="scrolltop" id="scroll-top">
+        <i class='bx bx-up-arrow-alt scrolltop_icon' ></i>
+    </a>
+    <script src="javaScript\funcionesCV.js"></script>
 </body>
 </html>
