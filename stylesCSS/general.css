@@ -60,8 +60,8 @@ a:-webkit-any-link{
 .link-nav-item{
     width: 100%;
     display: inline;
-    margin: 4px;
-    font-size: 30px;
+    margin: 5px;
+    font-size: 25px;
     color: white;
 }
 .top-header{
@@ -285,7 +285,6 @@ a:-webkit-any-link{
     color: whitesmoke;
     width: 45%;
     float: left;
-    margin-left: 50px;
     font-size: 20px;
     text-align: left;
 }
@@ -300,7 +299,6 @@ a:-webkit-any-link{
     color: rgb(255, 255, 255);
     width: 45%;
     float: right;
-    margin-right: 50px;
     font-size: 17px;
     text-align: right;
 }
