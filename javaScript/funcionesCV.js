@@ -5,6 +5,37 @@ function scrollTop(){
 }
 window.addEventListener('scroll', scrollTop)
 
+
+
+document.getElementById('boton-espanol').onclick = function (){
+  if (document.documentElement.lang=="es"){
+    console.log('El idioma ya es español')
+  }
+  else{
+    location.href="../index.html";
+  };
+}
+document.getElementById('boton-ingles').onclick = function (){
+  if (document.documentElement.lang=="es"){ 
+    location.href="ingles/indexEn.html";
+  }
+  else{
+    console.log('El idioma ya es ingles')
+  };
+}
+
+if(document.documentElement.lang=="es"){
+  document.getElementById('boton-espanol').style.color = "rgb(210, 126, 210)";
+  document.getElementById('boton-espanol').style.fontSize = "22px";
+  document.getElementById('boton-espanol').style.fontWeight = "900"
+}
+else{
+  document.getElementById('boton-ingles').style.fontWeight = "900";
+  document.getElementById('boton-ingles').style.color = "rgb(210, 126, 210)";
+  document.getElementById('boton-ingles').style.fontSize = "22px"
+}
+
+
 /*==================== DARK LIGHT THEME ====================
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
