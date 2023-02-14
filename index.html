@@ -17,7 +17,7 @@
         me resultaron muy didácticas y fáciles de comprender.
             En segundo lugar tenía entendido que el proyecto tenía fecha límite de entrega el 1ro de 
         febrero y que ahora es hasta el 1ro de marzo, por las dudas entrego este 31 de enero una primera
-        versión de mi curriculum, que si existe la oportunidad de tener feedback e ir mejorando el 
+        versión de mi curriculum, que si existe la posibilidad de tener feedback e ir mejorando el 
         contenido de la página, estaría agradecido.
             En los archivos, hay partes de código comentadas por una funcionalidad que no llegue 
         a agregar, de tener otra oportunidad de otra entrega, agregaría dicha función.
@@ -36,41 +36,39 @@
         </header>
             <nav>
                 <section>
-                    <div class="nav_menu">
+                    <div class="boton-menu" id="boton-menu-id">
+                        <i class="bx bx-grid-alt"></i>
+                    </div>
+                    <div class="nav_menu" id="nav-menu-id">
                         <ul class="link-nav-header">
-                            <!--<li class="link-nav-item">
-                                <a>
-                                    <i class='bx bx-moon change-theme' title="Theme" id="theme-button"></i>
-                                </a>
-                            </li>-->
                             <li class="link-nav-item">
-                                <a href="#inicio">
+                                <a href="#inicio" class="link-nav-item-a">
                                     <i class='bx bxs-home' ></i>Inicio
                                 </a>
                             </li>
                             <li class="link-nav-item">
-                                <a href="#formacion">
+                                <a href="#formacion" class="link-nav-item-a">
                                     <i class='bx bx-book' ></i>Formación
                                 </a>
                             </li>
                             <li class="link-nav-item">
-                                <a href="#carrera">
+                                <a href="#carrera" class="link-nav-item-a">
                                     <i class='bx bx-briefcase-alt' ></i>Carrera
                                 </a>
                             </li>
                             <li class="link-nav-item">
-                                <a href="#contacto">
+                                <a href="#contacto" class="link-nav-item-a">
                                     <i class='bx bx-user-pin' ></i>Contacto
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="idioma-box">
-                        <div class="idioma-espanol-box">
-                            <div class="idioma-espanol-button" id="boton-espanol">Español</div>
-                        </div>
-                        <div class="idioma-ingles-box">
-                            <div class="idioma-ingles-button" id="boton-ingles">English</div>
+                        <div class="idioma-box">
+                            <div class="idioma-espanol-box">
+                                <div class="idioma-espanol-button" id="boton-espanol">Español</div>
+                            </div>
+                            <div class="idioma-ingles-box">
+                                <div class="idioma-ingles-button" id="boton-ingles">English</div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -89,7 +87,8 @@
                 <div class="p-main">
                     <p>Soy estudiante de Ingeniería Electronica en la UNLP, acutalmente estoy cursando mi 4to año. <br>
                         También estoy involucrado con una empresa industrial trabajando como desarrollador part-time. <br>
-                        Me gusta levantar peso, así que por las tardes me suelo encontrar en un gimnasio del barrio con amigos.</p>
+                        Me gusta levantar peso, así que por las tardes me suelo encontrar en un gimnasio del barrio con amigos. <br>
+                        Me desenvuelvo con facilidad en equipos de trabajo de forma remota y presencial, con metodologías Agile, aportando positividad y conocimiento en cada oportunidad que sea posible.</p>
                 </div>
                 <div class="end-p-main">
                     <a href="#formacion" style="transition: width 2s; transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); text-decoration: underline rgb(190, 95, 190);">Desliza para más...</a>
@@ -161,11 +160,11 @@
             </div>
             <div class="descripcion-formulario"></div>
             <div class="formulario-datos">
-                <form id="form-email" method="get" class="form">
+                <form onsubmit="enviarEmail(); reset(); return false;" method="POST"  id="form-email" class="form">
                     <div class="campos-formulario">
-                        <input type="text" class="campo-form-a" name="nombre" data-name="Nombre" placeholder="Nombre" id="Nombre-1" required>
-                        <input type="email" class="campo-form-a" name="email-1" data-name="Email" placeholder="Email" id="Email-1" required>
-                        <textarea name="text-1" class="campo-form-b" data-name="Nombre" placeholder="Como puedo ayudarte?"></textarea>
+                        <input type="text" class="campo-form-a" name="nombre" placeholder="Nombre" id="Nombre-1" required>
+                        <input type="email" class="campo-form-a" name="email-1" placeholder="Email" id="Email-1" required>
+                        <textarea name="comentario" class="campo-form-b" placeholder="Como puedo ayudarte?" id="mensaje" rows="4"></textarea>
                     </div>
                     <input type="submit" value="Enviar" text-align="center" data-wait="Por favor espere..." class="campo-form-c">
                 </form>
@@ -177,7 +176,7 @@
         <div class="footer">
             <section>
                 <div id="footer-b">
-                    <a href="mailto:naujofre@hotmail.com">Escríbeme!</a>
+                    <!-- <a href="mailto:naujofre@hotmail.com">Escríbeme!</a> -->
                 </div>
             </section>
             <section id="footer-a">
@@ -190,5 +189,6 @@
         <i class='bx bx-up-arrow-alt scrolltop_icon' ></i>
     </a>
     <script src="javaScript\funcionesCV.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

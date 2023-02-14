@@ -19,56 +19,25 @@ img {
     border-radius: 8px;
   }
 
-/*Cambio de idioma*/
-
-
-
-
-
-
-/*Cambio de tema*/
-/*
-body.dark-theme{
-    --text-color: rgb(225, 0, 210);
-}
-
-.change-theme{
-    position: absolute;
-    right: 40%;
-    top: 2.2rem;
-    display: flex;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-.change-theme:hover{
-    color: var(--text-color);
-}
-
-#theme-button{
-    font-size: 27px;
-}
-*/
 /*Barra de navegación y logotipo principal*/
+
 a:-webkit-any-link{
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
 .nav{
-    border: 1px solid black;
     width: 100%;
     height: 150px;
     color: white;
 }
 .link-nav-header{
-    border: 1px solid black;
     width: 90%;
     float: right;
     height: auto;
     text-align: right;
 }
 .link-nav-item{
-    border: 1px solid black;
     width: 100%;
     display: inline;
     margin: 5px;
@@ -76,7 +45,6 @@ a:-webkit-any-link{
     color: white;
 }
 .top-header{
-    border: 1px solid black;
     width: 20%;
     float: left;
     font-size: 20px;
@@ -84,41 +52,41 @@ a:-webkit-any-link{
     text-align: center;
 }
 .nav_menu{
-    border: 1px solid black;
     width: 60%;
     float: right;
     color: white;
 }
+
+/*Cambio de idioma*/
+
 .idioma-box{
-    border: 1px solid black;
     width: 70%;
     float: right;
     display: flex;
     height: 40px;
     justify-content: right;
-
 }
 .idioma-espanol-box{
-    border: 1px solid black;
-    float: right;
     display: flex;
+    float: right;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: 10%;
 }
 .idioma-ingles-box{
-    border: 1px solid black;
     display: flex;
     float: right;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: 10%;
 }
 .idioma-espanol-button{
-    border: 1px solid black;
     font-size: 20px;
     float: right;
     text-align: center;
     cursor: pointer;
 }
 .idioma-ingles-button{
-    border: 1px solid black;
     font-size: 20px;
     float: right;
     text-align: center;
@@ -139,7 +107,6 @@ a:-webkit-any-link{
     height: 450px;
     margin-left: auto;
     margin-right: auto;
-
 }
 .main-screen-conteiner{
     width: 100%;
@@ -161,7 +128,6 @@ a:-webkit-any-link{
     height: auto;
     text-align: center;
 }
-
 .name-main{
     width: 50%;
     float: left;
@@ -273,6 +239,7 @@ a:-webkit-any-link{
     -webkit-box-direction: normal;
     margin-top: 10px;
     height: 40px;
+    border-radius: 8px;
 }
 .campo-form-b{
     border: 4px solid white;
@@ -286,18 +253,21 @@ a:-webkit-any-link{
     -webkit-box-direction: normal;
     margin-top: 10px;
     height: 100px;
+    border-radius: 8px;
 }
 .campo-form-c{
     border: 4px solid white;
-    width: 25%;
+    width: 20%;
     flex-direction: column;
     float: left;
+    justify-content: center;
     text-align: center;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     margin-top: 10px;
-
+    border-radius: 5px;
+    cursor: pointer;
 }
 #form-email{
     margin-left: auto;
@@ -356,6 +326,8 @@ a:-webkit-any-link{
     text-align: right;
 }
 
+/* Boton de scroll hacia arriba */
+
 .scrolltop{
     position: fixed;
     right: 1rem;
@@ -372,8 +344,264 @@ a:-webkit-any-link{
     font-size: 5rem;
     color:  rgb(190, 95, 190);
 }
-
 .show-scroll{
     visibility: visible;
     bottom: 5rem;
+}
+.boton-menu{
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 800px) {
+/* Boton de volver a inicio */
+    .scrolltop_icon{
+        font-size: 3.5rem;
+        color:  rgb(190, 95, 190);
+    }
+    .show-scroll{
+        visibility: visible;
+        bottom: 2rem;
+    }
+/* Boton de menu y opciones */
+    .nav_menu{
+        width: 100%;
+        right: 0.5rem;
+        bottom: -100%;
+        position: fixed;
+        transition: .3s;
+        float: right;
+        justify-self: right;
+        color: white;
+        z-index: 5;
+    }
+    .link-nav-item{
+        width: 100%;
+        display: inline;
+        margin: 0px;
+        font-size: 25px;
+        color: white;
+        text-align: right;
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(190, 95, 190));
+    }
+    .link-nav-header{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.25rem;
+        width: 30%;
+        float: right;
+        height: auto;
+        text-align: right;
+    }
+    .link-nav-item-a{
+        display: flex;
+        flex-direction: column;
+    }
+    .show-menu{
+        bottom: 12.5%;
+    }
+    .boton-menu{
+        visibility: visible;
+        position: fixed;
+        left: 2rem;
+        display: inline;
+        justify-content: right;
+        font-size: 3rem;
+        bottom: 2rem;
+        z-index: 5;
+    }
+    .idioma-box{
+        width: 100%;
+        float: right;
+    }
+    .idioma-espanol-box{
+        width: 25%;
+        justify-content: center;
+        display: flex;
+        float: right;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(130, 130, 130));
+        z-index: 5;
+    }
+    .idioma-ingles-box{
+        width: 25%;
+        justify-content: center;
+        display: flex;
+        float: right;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(130, 130, 130));
+        z-index: 5;
+    }
+
+/* Pantalla de inicio, primera vista */
+    
+    .top-header{
+        width: 30%;
+    }
+    .nav{
+        width: 100%;
+        height: 3rem;
+        color: white;
+    }
+    .main-screen{
+        margin-top: 50px;
+        width: 100%;
+        z-index: 2;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-screen-conteiner{
+        width: 100%;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-screen-conteiner-a{
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+    }
+    .main-screen-conteiner-b{
+        z-index: -1;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .main-screen-conteiner-image{
+        z-index: -1;
+        width: 70%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        opacity: 0.9;
+    }
+    .p-main{
+        width: 100%;
+        float: right;
+        font-size: 20px;
+        text-align: center; 
+    }
+    .end-p-main{
+        width: 100%;
+        float: right;
+        font-size: 20px;
+        text-align: center;
+    }
+
+/* Formación personal */
+
+    .titulo-cv{
+        width: 95%;
+        height: 100px;
+        margin-left: auto;
+        margin-right: 0%;
+    }
+    .categorias-cv{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        position: relative;
+        height: auto;
+        display: table;
+    }
+    .categorias-cv-a{
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .categorias-cv-a-1{
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .categorias-cv-a-2{
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .tiempo-empleo{
+        font-size: 15px;
+    }
+
+/* Formulario de contacto */
+
+    .formulario-datos{
+        width: 60%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+    .campo-form-a{
+        border: 4px solid white;
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0%;
+        float: left;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        margin-top: 10px;
+        height: 40px;
+    }
+    .campo-form-b{
+        border: 4px solid white;
+        width: 100%;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: 0%;
+        float: left;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        margin-top: 10px;
+        height: 100px;
+    }
+    #form-email{
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        height: 200px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        width: 100%;
+    }
+    .descripcion-formulario{
+        width: 10%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+
+/* Pie de pagina */
+
+    .footer{
+        width: 100%;
+        height: 140px;
+    }
 }
